@@ -13,7 +13,7 @@ CREATE TABLE `project_01`.`users` (
 );
 
 CREATE TABLE `project_01`.`posts` (
-  `post_id` integer NOT NULL AUTO INCREMENT,
+  `post_id` integer NOT NULL auto_increment,
   `email` varchar(320) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE `project_01`.`posts` (
 );
 
 CREATE TABLE `project_01`.`comments` (
-  `comment_id` integer NOT NULL AUTO INCREMENT,
+  `comment_id` integer NOT NULL auto_increment,
   `post_id` integer NOT NULL,
   `email` varchar(320) NOT NULL,
   `content` text NOT NULL,

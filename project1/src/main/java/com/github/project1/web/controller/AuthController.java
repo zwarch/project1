@@ -55,9 +55,12 @@ public class AuthController {
         String name = (String) claims.get("name");
         long timestamp = (long) claims.get("timestamp");
 
+        if( email.equals(logoutRequest.getEmail()) == false ){
+            return "로그아웃이 실패하였습니다.";
+        }
 
     //    userService.logout(logoutRequest);
-        return String.format("a : %s, b : %s, c : %ld\n", email, name, timestamp );
+        return "로그아웃이 성공적으로 완료되었습니다.";
     }
 
     @GetMapping("/generate-token")
